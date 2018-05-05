@@ -66,15 +66,15 @@ function showWhoToFollow (reply) {
     var name = user.to_id
     if (index === 0) {
       document.getElementById('who-to-follow-avatar-0').setAttribute('src',img)
-      document.getElementById('who-to-follow-link-0').innerHTML = encodeURI(name)
+      document.getElementById('who-to-follow-id-0').textContent = name
       document.getElementById('who-to-follow-link-0').setAttribute('href','/@' + encodeURI(name))
     } else if (index === 1) {
       document.getElementById('who-to-follow-avatar-1').setAttribute('src',img)
-      document.getElementById('who-to-follow-link-1').innerHTML = encodeURI(name)
+      document.getElementById('who-to-follow-id-1').textContent = name
       document.getElementById('who-to-follow-link-1').setAttribute('href','/@' + encodeURI(name))
     } else if (index === 2) {
       document.getElementById('who-to-follow-avatar-2').setAttribute('src',img)
-      document.getElementById('who-to-follow-link-2').innerHTML = encodeURI(name)
+      document.getElementById('who-to-follow-id-2').textContent = name
       document.getElementById('who-to-follow-link-2').setAttribute('href','/@' + encodeURI(name))
     }
     index = index + 1
