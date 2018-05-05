@@ -211,15 +211,6 @@ return media_views;
 }
 function timeline_template(status) {
 if (status.reblog === null) {
-if (
-status.account.id !== JSON.parse(localStorage.getItem("what_to_follow_0")).id &
-status.account.id !== JSON.parse(localStorage.getItem("what_to_follow_1")).id &
-status.account.id !== JSON.parse(localStorage.getItem("what_to_follow_2")).id &
-status.account.id != current_id &
-current_following_ids.indexOf(status.account.id) === -1
-) {
-localStorage.setItem("what_to_follow_"+String(Math.floor(Math.random()*3)), JSON.stringify(status.account) );
-}
 for(i=0;i<status.emojis.length;i++) {
 status.content = status.content.replace(new RegExp(":"+status.emojis[i].shortcode+":","g"),"<img src='"+status.emojis[i].static_url+"' class='emoji'>");
 }
@@ -336,15 +327,6 @@ ${toot_reblog_button}
 </li>`);
 return $(html)
 } else {
-if (
-status.reblog.account.id !== JSON.parse(localStorage.getItem("what_to_follow_0")).id &
-status.reblog.account.id !== JSON.parse(localStorage.getItem("what_to_follow_1")).id &
-status.reblog.account.id !== JSON.parse(localStorage.getItem("what_to_follow_2")).id &
-status.reblog.account.id != current_id &
-current_following_ids.indexOf(status.reblog.account.id) === -1
-) {
-localStorage.setItem("what_to_follow_" + String(Math.floor(Math.random()*3)), JSON.stringify(status.reblog.account));
-}
 for(i=0;i<status.reblog.emojis.length;i++) {
 status.reblog.content = status.reblog.content.replace(new RegExp(":"+status.reblog.emojis[i].shortcode+":","g"),"<img src='"+status.reblog.emojis[i].static_url+"' class='emoji'>");
 }
