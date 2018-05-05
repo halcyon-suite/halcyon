@@ -8,7 +8,8 @@
       <div class="label_box">
 	<a id="who-to-follow-link-0">
 	  <h3>
-	    <span class="un" id="who-to-follow-id-0">Loading...</span>
+	    <span class="dn emoji_poss" id="who-to-follow-screen-name-0">Loading...</span><br>
+	    <span class="un" id="who-to-follow-id-0"></span>
 	  </h3>
 	</a>
       </div>
@@ -20,7 +21,8 @@
       <div class="label_box">
 	<a id="who-to-follow-link-1">
 	  <h3>
-	    <span class="un" id="who-to-follow-id-1">Loading...</span>
+	    <span class="dn emoji_poss" id="who-to-follow-screen-name-1">Loading...</span><br>
+	    <span class="un" id="who-to-follow-id-1"></span>
 	  </h3>
 	</a>
       </div>
@@ -32,7 +34,8 @@
       <div class="label_box">
 	<a id="who-to-follow-link-2">
 	  <h3>
-	    <span class="un" id="who-to-follow-id-2">Loading...</span>
+	    <span class="dn emoji_poss" id="who-to-follow-screen-name-2">Loading...</span><br>
+	    <span class="un" id="who-to-follow-id-2"></span>
 	  </h3>
 	</a>
       </div>
@@ -64,17 +67,21 @@ function showWhoToFollow (reply) {
       img = '/assets/images/halcyon_logo.png'
     }
     var name = user.to_id
+    var screenName = user.name
     if (index === 0) {
       document.getElementById('who-to-follow-avatar-0').setAttribute('src',img)
       document.getElementById('who-to-follow-id-0').textContent = name
+      document.getElementById('who-to-follow-screen-name-0').textContent = screenName
       document.getElementById('who-to-follow-link-0').setAttribute('href','/@' + encodeURI(name))
     } else if (index === 1) {
       document.getElementById('who-to-follow-avatar-1').setAttribute('src',img)
       document.getElementById('who-to-follow-id-1').textContent = name
+      document.getElementById('who-to-follow-screen-name-1').textContent = screenName
       document.getElementById('who-to-follow-link-1').setAttribute('href','/@' + encodeURI(name))
     } else if (index === 2) {
       document.getElementById('who-to-follow-avatar-2').setAttribute('src',img)
       document.getElementById('who-to-follow-id-2').textContent = name
+      document.getElementById('who-to-follow-screen-name-2').textContent = screenName
       document.getElementById('who-to-follow-link-2').setAttribute('href','/@' + encodeURI(name))
     }
     index = index + 1
