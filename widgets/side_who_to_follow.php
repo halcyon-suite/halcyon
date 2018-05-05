@@ -40,6 +40,14 @@
   </ul>
 </div>
 
+<?php
+  $appSettings = parse_ini_file('config.ini',true);
+  $whoToFollowProvider = $appSettings["App"]["who_to_follow_provider"];
+?>
+<script type="application/javascript">
+var whoToFollowProvider = '<?php echo $whoToFollowProvider ?>'
+</script>
+
 <script type="application/javascript">
 function showWhoToFollow (reply) {
   var users = reply.ids
@@ -77,11 +85,9 @@ function showWhoToFollow (reply) {
 }
 
 function getWhoToFollow () {
-  var user = localStorage.getItem("current_id")
-  var appSettings = parse_ini_file('../config.ini',true)
-  var whoToFollowProvider = appSettings["App"]["who_to_follow_provider"]
-  if (user && whoToFollowProvider) {
-    var host = window.location.hostname
+  var host = localStorage.getItem("current_instance")
+  var user = localStorage.getItem("current_acct")
+  if (host && user && whoToFollowProvider) {
     var url
     url = whoToFollowProvider.replace(/{{host}}/g, encodeURIComponent(host))
     url = url.replace(/{{user}}/g, encodeURIComponent(user))
