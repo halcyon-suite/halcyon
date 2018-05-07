@@ -2,4 +2,4 @@
 [App]
 api_client_name = Your application name
 api_client_website = https://example.com/
-
+who_to_follow_provider = https://vinayaka.distsn.org/cgi-bin/vinayaka-user-match-osa-api.cgi?{{host}}+{{user}}
