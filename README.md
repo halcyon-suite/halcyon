@@ -1,6 +1,9 @@
 # Halcyon for Mastodon and Pleroma
 An webclient for Mastodon and Pleroma which looks like Twitter
 
+# We have moved
+Please use our new repository: [halcyon-suite/halcyon](https://notabug.org/halcyon-suite/halcyon)
+
 >The original author of this genius piece of software was inactive for a while and then shut down his demo instance and deleted this repository. I love Halcyon, it's the thing which makes Mastodon the best social network in the world. I took the Code from the Halcyon fork of cybre.space which still works but doesn't seem to get updates, too. I uploaded it here to make the original link work again and don't link into the big nothing. I'm working on much other stuff, too, what is why I won't use my whole free time to work on Halcyon but I try to do as much as possible here.
 
 <img src="https://halcyon.cybre.space/login/assets/images/preview0.png">
